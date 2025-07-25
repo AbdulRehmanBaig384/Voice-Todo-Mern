@@ -11,7 +11,7 @@ require('./config/passport');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000', // Your Next.js frontend URL
+  origin: 'http://localhost:3000', 
   credentials: true,
 }));
 app.use(express.json());
