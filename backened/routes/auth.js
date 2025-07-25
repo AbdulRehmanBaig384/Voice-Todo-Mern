@@ -8,8 +8,6 @@ const User = require('../models/User');
 const generateToken = (user) => {
   return jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
 };
-
-// Signup route
 router.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
   try {
@@ -27,7 +25,6 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Login route
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -44,7 +41,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Google OAuth routes
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 router.get('/google/callback',
