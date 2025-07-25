@@ -1,3 +1,5 @@
+<img width="1916" height="897" alt="image" src="https://github.com/user-attachments/assets/6d872d52-c131-495f-ac93-d1991581683b" />
+
 # 📝 Abdul Rehman’s MERN AI ToDo List (with Voice Support)
 
 Welcome to **Abdul Rehman's MERN ToDo App** — a sleek and powerful task manager built using the MERN stack with voice recognition and a beautiful animated splash screen.
