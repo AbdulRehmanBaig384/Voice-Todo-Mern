@@ -107,11 +107,11 @@ const [editedTask, setEditedTask] = useState({ title: "", description: "" });
 
       <div className="max-w-xl mx-auto mt-4 flex justify-between items-center px-4">
         <p className="text-white text-md">
-          ✅ {tasks.filter((t) => t.completed).length} of {tasks.length} tasks completed
+           {tasks.filter((t) => t.completed).length} of {tasks.length} tasks completed
         </p>
         <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} className="bg-white/20 text-white p-2 rounded-md">
-          <option value="newest">📅 Newest First</option>
-          <option value="oldest">🕒 Oldest First</option>
+          <option value="newest"> Newest First</option>
+          <option value="oldest"> Oldest First</option>
         </select>
       </div>
 
@@ -132,7 +132,7 @@ const [editedTask, setEditedTask] = useState({ title: "", description: "" });
         <AnimatePresence>
           {visibleTasks.length === 0 ? (
             <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center text-2xl font-semibold text-white mt-8">
-              No Task Available 😔
+              No Task Available 
             </motion.h2>
           ) : (
             visibleTasks.map((task, idx) => (
@@ -179,7 +179,7 @@ const [editedTask, setEditedTask] = useState({ title: "", description: "" });
                         setEditedTask({ title: "", description: "" });
                       }}
                      className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-lg transition"
-                    >✅ Save</button>
+                    > Save</button>
                   ) : (
                     <button
                       onClick={() => {
