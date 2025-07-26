@@ -39,8 +39,7 @@ export default function LoginPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         onSubmit={handleLogin}
-        className="bg-slate-800/90 backdrop-blur p-8 rounded-2xl shadow-xl space-y-5 w-full max-w-sm"
-      >
+        className="bg-slate-800/90 backdrop-blur p-8 rounded-2xl shadow-xl space-y-5 w-full max-w-sm">
         <h2 className="text-3xl font-bold text-center mb-2">
           Login & Take Control of Your To-Do List
         </h2>
@@ -51,24 +50,19 @@ export default function LoginPage() {
           value={email}
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 rounded-md bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        />
+          className="w-full p-3 rounded-md bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"/>
         <motion.input
           whileFocus={{ scale: 1.02 }}
           type="password"
           value={password}
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 rounded-md bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        />
+          className="w-full p-3 rounded-md bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"/>
         <motion.button
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="w-full bg-blue-600 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
-        >
-          Login
+          className="w-full bg-blue-600 py-3 rounded-md font-semibold hover:bg-blue-700 transition">Login
         </motion.button>
-
         <div className="flex items-center gap-2 text-sm text-gray-400 text-center">
           <div className="flex-grow border-t border-gray-600" />
           <span>or</span>
@@ -78,12 +72,10 @@ export default function LoginPage() {
         <motion.a
           whileHover={{ scale: 1.03 }}
           href={`${API}/auth/google`}
-          className="flex items-center justify-center gap-3 w-full py-2 px-4 bg-white text-slate-900 rounded-md font-medium hover:bg-gray-200 transition"
-        >
+          className="flex items-center justify-center gap-3 w-full py-2 px-4 bg-white text-slate-900 rounded-md font-medium hover:bg-gray-200 transition" >
           <FcGoogle className="text-xl" />
           Sign in with Google
         </motion.a>
-
         <p className="text-sm text-center text-gray-300 mt-2">
           Don't have an account?{' '}
           <Link href="/signup" className="text-blue-400 hover:underline">
