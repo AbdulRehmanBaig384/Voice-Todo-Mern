@@ -1,12 +1,9 @@
-
 'use client';
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/app/context/AuthContext';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
 
 export default function SignupPage() {
   const [name, setName] = useState('');
@@ -42,43 +39,20 @@ return (
       >
         <h2 className="text-3xl font-bold text-center">Create Account</h2>
 
-        <input
-          type="text"
-          value={name}
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
+        <input type="text" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)}
+          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"/>
 
-        <input
-          type="email"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
+        <input type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)}
+          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
 
-        <input
-          type="password"
-          value={password}
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
+        <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)}
+          className="w-full p-3 rounded bg-gray-700 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"/>
 
-        <button
-          type="submit"
-          className="w-full bg-green-600 hover:bg-green-700 py-3 rounded font-semibold transition"
-        >
-          Sign Up
+        <button  type="submit" className="w-full bg-green-600 hover:bg-green-700 py-3 rounded font-semibold transition">Sign Up
         </button>
-
-        <p className="text-center text-sm text-gray-300 pt-2">
+     <p className="text-center text-sm text-gray-300 pt-2">
           Already have an account?{" "}
-          <Link
-            href="/login"
-            className="text-green-400 hover:underline transition"
-          >
+          <Link href="/login" className="text-green-400 hover:underline transition">
             Login here
           </Link>
         </p>
