@@ -49,7 +49,6 @@ const [editedTask, setEditedTask] = useState({ title: "", description: "" });
       resetTranscript();
     }
   }, [listening]);
-
   const submitHandler = (e) => {
     e.preventDefault();
     setTasks([
@@ -58,7 +57,6 @@ const [editedTask, setEditedTask] = useState({ title: "", description: "" });
     setTitle("");
     setDescription("");
   };
-
   const deleteHandler = (idx) => {
     const copy = [...tasks];
     copy.splice(idx, 1);
