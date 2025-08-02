@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '../app/context/AuthContext';
-
 export default function GoogleSuccessPage() {
   const router = useRouter();
   const { login } = useAuth();
-
   useEffect(() => {
     const { token } = router.query;
 
