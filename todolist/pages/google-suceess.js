@@ -12,7 +12,6 @@ export default function GoogleSuccessPage() {
       router.push('/');          
     }
   }, [router.query]);
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
       <p className="text-xl"> Logging you in via Google...</p>
