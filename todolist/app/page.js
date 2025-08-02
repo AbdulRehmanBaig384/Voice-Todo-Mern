@@ -9,7 +9,6 @@ import Splash from "./component/splash";
 import Sidebar from "./component/Sidebar";
 import { useAuth } from "./context/AuthContext";
 import { useRouter } from "next/navigation";
-
 export default function TodoPage() {
 const { token, logout, loading } = useAuth();
 const router = useRouter();
@@ -26,12 +25,10 @@ const [editingIndex, setEditingIndex] = useState(null);
 const [editedTask, setEditedTask] = useState({ title: "", description: "" });
 
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
-
   useEffect(() => {
     const splashTimer = setTimeout(() => setShowSplash(false), 2000);
     return () => clearTimeout(splashTimer);
   }, []);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
