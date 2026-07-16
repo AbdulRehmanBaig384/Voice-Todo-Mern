@@ -3,10 +3,10 @@ import {MdDashboard, MdEdit, MdEditCalendar, MdFavorite,MdHeartBroken,MdLogout} 
 import {motion} from 'framer-motion';
 import Link from 'next/link';
 
-export default function Sidebar({isOpen,onClose,current,setFilter}) {
-  const sideVariants = {
-    closed: {x:-260},
-    open: {x:0},
+export default function Sidebar({isOpen,onClose,current,setFilter}){
+  const sideVariants={
+    closed:{x:-260},
+    open:{x:0},
   };
   return(
     <motion.aside
