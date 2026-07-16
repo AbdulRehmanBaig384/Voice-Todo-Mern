@@ -38,7 +38,7 @@ export default function Sidebar({isOpen,onClose,current,setFilter}) {
             current === 'favourite'
               ? 'before:absolute before:left-0 before:h-full before:w-1 before:bg-purple-500'
               : ''}`}>
-          <MdFavorite size={24} /> Favourites
+          <MdFavorite size={24}/> Favourites
 
         </button>
 
@@ -46,7 +46,7 @@ export default function Sidebar({isOpen,onClose,current,setFilter}) {
     hover:bg-white/10 hover:text-white
     ${current === 'today' ? 'bg-purple-500 text-white' : 'text-white/80'}
   `}>
-  <MdEditCalendar size={24} />
+  <MdEditCalendar size={24}/>
   <span>Due Today</span>
 </Link>
 
@@ -63,7 +63,7 @@ export default function Sidebar({isOpen,onClose,current,setFilter}) {
   <span>Missed</span>
 </Link>
         <Link href="/login" className="flex items-center gap-4 mt-auto hover:text-white">
-          <MdLogout size={24} />Logout
+          <MdLogout size={24}/>Logout
         </Link>
       </nav>
     </motion.aside>
