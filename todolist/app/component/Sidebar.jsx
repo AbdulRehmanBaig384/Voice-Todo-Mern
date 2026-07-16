@@ -27,9 +27,9 @@ export default function Sidebar({isOpen,onClose,current,setFilter}){
           onClick={() => setFilter('all')}
           className={`flex items-center gap-4 hover:text-white relative pl-3 ${
             current === 'all'
-              ? 'before:absolute before:left-0 before:h-full before:w-1 before:bg-purple-500'
-              : ''}`}>
-          <MdDashboard size={24} /> All Tasks
+              ?'before:absolute before:left-0 before:h-full before:w-1 before:bg-purple-500'
+              :''}`}>
+          <MdDashboard size={24}/> All Tasks
         </Link>
 
         <button
