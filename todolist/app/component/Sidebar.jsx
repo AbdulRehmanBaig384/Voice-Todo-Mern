@@ -3,7 +3,7 @@ import {MdDashboard, MdEdit, MdEditCalendar, MdFavorite,MdHeartBroken,MdLogout} 
 import {motion} from 'framer-motion';
 import Link from 'next/link';
 
-export default function Sidebar({isOpen,onClose,current, setFilter }) {
+export default function Sidebar({isOpen,onClose,current,setFilter}) {
   const sideVariants = {
     closed: {x:-260},
     open: {x:0},
@@ -58,8 +58,8 @@ export default function Sidebar({isOpen,onClose,current, setFilter }) {
 </Link>
 
 <Link href="#" onClick={() => setFilter('missed')} className={`flex items-center gap-4 relative pl-4 py-2 rounded-lg transition-all duration-200 hover:bg-white/10 hover:text-white
-    ${current === 'missed' ? 'bg-purple-500 text-white' : 'text-white/80'}
-  `}><MdHeartBroken size={24} />
+    ${current === 'missed' ? 'bg-purple-500 text-white':'text-white/80'}
+  `}><MdHeartBroken size={24}/>
   <span>Missed</span>
 </Link>
         <Link href="/login" className="flex items-center gap-4 mt-auto hover:text-white">
