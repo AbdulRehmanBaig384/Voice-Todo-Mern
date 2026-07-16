@@ -33,7 +33,7 @@ export default function Sidebar({isOpen,onClose,current,setFilter}){
         </Link>
 
         <button
-          onClick={() => setFilter('favourite')}
+          onClick={()=>setFilter('favourite')}
           className={`flex items-center gap-4 hover:text-white relative pl-3 ${
             current==='favourite'
               ?'before:absolute before:left-0 before:h-full before:w-1 before:bg-purple-500'
@@ -42,9 +42,9 @@ export default function Sidebar({isOpen,onClose,current,setFilter}){
 
         </button>
 
- <Link href="#" onClick={() => setFilter('today')} className={`flex items-center gap-4 relative pl-4 py-2 rounded-lg transition-all duration-200
+ <Link href="#" onClick={()=>setFilter('today')} className={`flex items-center gap-4 relative pl-4 py-2 rounded-lg transition-all duration-200
     hover:bg-white/10 hover:text-white
-    ${current === 'today' ? 'bg-purple-500 text-white' : 'text-white/80'}
+    ${current === 'today'?'bg-purple-500 text-white' : 'text-white/80'}
   `}>
   <MdEditCalendar size={24}/>
   <span>Due Today</span>
