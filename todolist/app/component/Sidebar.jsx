@@ -1,9 +1,9 @@
 'use client';
-import { MdDashboard, MdEdit, MdEditCalendar, MdFavorite, MdHeartBroken, MdLogout } from 'react-icons/md';
-import { motion } from 'framer-motion';
+import {MdDashboard, MdEdit, MdEditCalendar, MdFavorite,MdHeartBroken,MdLogout} from 'react-icons/md';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 
-export default function Sidebar({ isOpen, onClose, current, setFilter }) {
+export default function Sidebar({isOpen,onClose,current, setFilter }) {
   const sideVariants = {
     closed: { x: -260 },
     open: { x: 0 },
