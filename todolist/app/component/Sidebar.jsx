@@ -37,9 +37,7 @@ export default function Sidebar({isOpen,onClose,current, setFilter }) {
           className={`flex items-center gap-4 hover:text-white relative pl-3 ${
             current === 'favourite'
               ? 'before:absolute before:left-0 before:h-full before:w-1 before:bg-purple-500'
-              : ''
-          }`}
-        >
+              : ''}`}>
           <MdFavorite size={24} /> Favourites
 
         </button>
