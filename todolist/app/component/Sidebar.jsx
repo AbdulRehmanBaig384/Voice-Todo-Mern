@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 export default function Sidebar({isOpen,onClose,current, setFilter }) {
   const sideVariants = {
-    closed: { x: -260 },
-    open: { x: 0 },
+    closed: {x:-260},
+    open: {x:0},
   };
-  return (
+  return(
     <motion.aside
       variants={sideVariants}
       initial="closed"
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ?'open' :'closed'}
       transition={{ type: 'spring', stiffness: 80 }}
       className="fixed top-0 left-0 h-full w-[260px] bg-white/10 backdrop-blur-xl
                  border-r border-white/20 shadow-xl z-40 flex flex-col">
